@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* * {
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/** {
     padding: 0;
     margin: 0;
 } */
 body {
   background-color: #f1f1f1;
-  /* color: #2d2d2d; */
+  color: #2d2d2d;
   font-size: 1em;
   font-weight: normal;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
 a {
@@ -37,14 +37,29 @@ a:active {
 .container {
   max-width: 750px;
   margin: 0 auto;
+  padding-top: 30px;
 }
 .info p {
   margin: 0;
+  font-weight: 400;
   font-style: italic;
   text-decoration: none;
 }
 .info {
+  display: flex;
   margin-bottom: 20px;
+}
+@media (max-width: 700px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+}
+.info-text {
+  margin-left: 40px;
+}
+.info-text h4 {
+  margin-bottom: 10px;
 }
 
 .bg-yellow {
@@ -73,17 +88,25 @@ a:active {
   margin-bottom: 10px;
 }
 
+/* TABLE */
 .table {
   width: 100%;
 }
 .table td {
   padding-bottom: 10px;
 }
+.table td:nth-child(1) {
+  color: #000000;
+}
 .table td:nth-child(2),
 .table td:nth-child(3) {
   color: #86898f;
 }
-
+/* ^^^^^ TABLE ^^^^^*/
+/* PORTFOLIO */
+.card:nth-child(4) {
+  padding: 15px 0 15px 20px;
+}
 .card .link-list {
   padding: 0px;
   list-style: none;
@@ -96,7 +119,7 @@ a:active {
   height: 24px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
 }
 
 .card .link-list li a:hover {
@@ -105,19 +128,105 @@ a:active {
 .card .link-list li:nth-child(1):hover {
   text-decoration: none;
   border-bottom-color: #029aff;
+  transition: opacity 0.3s ease;
 }
 .card .link-list li:nth-child(2):hover {
   text-decoration: none;
   border-bottom-color: #ff01d5;
+  transition: opacity 0.3s ease;
 }
 .card svg {
-  padding-right: 5px;
+  padding-right: 10px;
 }
-.card .link-list li:nth-child(1) a:hover {
+.card .link-list li:nth-child(1):hover .blue {
   color: #029aff;
   fill: #029aff;
+  transition: opacity 0.3s ease;
 }
-.card .link-list li:nth-child(2) a:hover {
+
+.card .link-list li:nth-child(2):hover .pink {
   color: #ff01d5;
   fill: #ff01d5;
+  transition: opacity 0.3s ease;
 }
+
+/* ^^^^^ PORTFOLIO ^^^^^ */
+/*  CONTACT FORM  */
+.contact h2 {
+  text-align: center;
+}
+.form-group label {
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: #000000;
+  padding: 15px 0 10px;
+  outline: none;
+  font-family: inherit;
+  background: transparent;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  font-weight: normal;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+  font-weight: normal;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 20px;
+}
+.row > .form-group {
+  width: 50%;
+}
+.row > .form-group:first-child {
+  margin-right: 20px;
+}
+.btn {
+  background: #000000;
+  color: #fff;
+  padding: 15px 20px;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  font-weight: 300;
+  transition: opacity 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+/* ^^^^^ CONTACT FORM ^^^^^ */
+
+/* position */
+/* .position {
+  position: relative;
+  border: 4px solid black;
+  margin-top: 40px;
+  padding: 20px;
+  height: 300px;
+}
+.box {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: lightcoral;
+} */
