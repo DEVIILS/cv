@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* * {
+    padding: 0;
+    margin: 0;
+} */
+body {
+  background-color: #f1f1f1;
+  /* color: #2d2d2d; */
+  font-size: 1em;
+  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: rgb(115, 115, 116);
+}
+a:hover {
+  color: #2d2d2d;
+  text-decoration: underline;
+}
+a:active {
+  color: rgb(60, 145, 255);
+}
+.avatar {
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px #2d2d2d93;
+}
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.info p {
+  margin: 0;
+  font-style: italic;
+  text-decoration: none;
+}
+.info {
+  margin-bottom: 20px;
+}
+
+.bg-yellow {
+  background: #fff9dc;
+}
+.bg-green {
+  background: #e5ffe7;
+}
+.bg-red {
+  background: #ffe5e5;
+}
+
+.card {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.card h2 {
+  margin-bottom: 10px;
+}
+.list {
+  padding: 0 20px;
+}
+.list li {
+  color: #86898f;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+}
+.table td {
+  padding-bottom: 10px;
+}
+.table td:nth-child(2),
+.table td:nth-child(3) {
+  color: #86898f;
+}
+
+.card .link-list {
+  padding: 0px;
+  list-style: none;
+}
+.card .link-list li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2d2d2d;
+}
+.card .link-list li a {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card .link-list li a:hover {
+  text-decoration: none;
+}
+.card .link-list li:nth-child(1):hover {
+  text-decoration: none;
+  border-bottom-color: #029aff;
+}
+.card .link-list li:nth-child(2):hover {
+  text-decoration: none;
+  border-bottom-color: #ff01d5;
+}
+.card svg {
+  padding-right: 5px;
+}
+.card .link-list li:nth-child(1) a:hover {
+  color: #029aff;
+  fill: #029aff;
+}
+.card .link-list li:nth-child(2) a:hover {
+  color: #ff01d5;
+  fill: #ff01d5;
+}
