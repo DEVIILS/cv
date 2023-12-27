@@ -322,6 +322,9 @@ a:active {
     display: block;
     text-align: center;
   }
+  .info-text {
+    margin: 0;
+  }
   .avatar {
     border-radius: 50%;
     border: 1px solid #39b54a;
