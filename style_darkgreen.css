@@ -93,11 +93,23 @@ a:active {
   color: rgb(60, 145, 255);
   transition: all 0.2s ease-in-out;
 }
+.img-avatar {
+  height: 210px;
+  width: 271px;
+}
 .avatar {
-  width: 225px;
+  display: block;
+  margin: 2px auto;
+  width: 95%;
   border-radius: 10px;
   box-shadow: 4px 4px 10px #2d2d2d93;
   border-bottom: 1px solid #39b54a;
+  transition: all 0.4s ease-in-out;
+}
+.avatar:hover {
+  width: 97%;
+  opacity: 0.8;
+  transition: all 0.4s ease-in-out;
 }
 .container {
   max-width: 750px;
@@ -309,5 +321,13 @@ a:active {
   .info {
     display: block;
     text-align: center;
+  }
+  .avatar {
+    border-radius: 50%;
+    border: 1px solid #39b54a;
+  }
+  .img-avatar {
+    height: 260px;
+    margin: 0 auto;
   }
 }
